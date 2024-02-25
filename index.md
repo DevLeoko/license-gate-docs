@@ -9,10 +9,9 @@ nav_order: 1
 <p class="fs-6 fw-300">LicenseGate is an open-source licensing tool for developers. Create, manage and
 verify licenses or api keys for your software with ease.</p>
 
-[Get started now](/docs/getting-started){: .btn .btn-primary .btn-blue .fs-5
-.mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub](https://github.com/DevLeoko/license-gate){: .btn .fs-5 .mb-4
-.mb-md-0 }
+[Get started now](/getting-started){: .btn .btn-primary .btn-blue .fs-5 .mb-4
+.mb-md-0 .mr-2 } [View it on GitHub](https://github.com/DevLeoko/license-gate){:
+.btn .fs-5 .mb-4 .mb-md-0 }
 
 # Use Cases
 
