@@ -3,3 +3,7 @@
 $blue-000: #005dbf;
 
 $link-color: $blue-000;
+
+.main-content dt::after {
+  content: "" !important;
+}

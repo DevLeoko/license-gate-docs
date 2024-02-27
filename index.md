@@ -62,3 +62,9 @@ the purchase. LicenseGate can help you with that.
 You can create a license for the client and manage the access to the software
 with LicenseGate. You can also set a time limit for the trial period and oversee
 the usage of the software.
+
+## There is more
+
+These are just a few examples of what you can do with LicenseGate. We would love
+to hear about your use case. [Let us know](mailto:lets@respark.dev) how you use
+LicenseGate.

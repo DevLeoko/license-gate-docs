@@ -8,3 +8,8 @@ logo: "https://licensegate.io/images/logo.svg"
 
 aux_links:
   Manage your licenses: https://app.licensegate.io
+
+callouts:
+  alternative:
+    title: Alternative
+    color: grey-lt
