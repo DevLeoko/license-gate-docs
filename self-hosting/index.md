@@ -2,6 +2,7 @@
 title: Self hosting
 layout: default
 nav_order: 7
+has_children: true
 ---
 
 <!-- prettier-ignore-start -->
@@ -44,7 +45,9 @@ For example, the frontend should be served under
 
 ## Frontend
 
-1. Clone the [GitHub repository](https://github.com/DevLeoko/license-gate)
+1. Clone the [GitHub repository](https://github.com/DevLeoko/license-gate): 
+`git clone https://github.com/DevLeoko/license-gate`, which creates a folder 
+    named "license-gate"
 2. Navigate to the frontend directory: `cd frontend`.
 3. Setup the environment variables in `.env` (see below for an example). For
    security reasons the `.env` file in the `backend` directory should be empty
@@ -115,7 +118,8 @@ not require the steps above)
 
 ## Backend
 
-1. Clone the [GitHub repository](https://github.com/DevLeoko/license-gate)
+1. Clone the [GitHub repository](https://github.com/DevLeoko/license-gate): `git clone https://github.com/DevLeoko/license-gate`, which creates a folder 
+    named "license-gate"
 2. Navigate to the backend directory: `cd backend`.
 3. Setup the environment variables `.env` (see below for an example)
 4. Run `npm install`, `npm run prisma-up` and `npm run generate` to setup the
