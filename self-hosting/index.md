@@ -163,3 +163,11 @@ RESET_PASSWORD_URL=https://licensegate.example.com/auth/password
 CORS_ORIGIN=https://licensegate.example.com
 GOOGLE_AUTH_CLIENT_ID=none
 ```
+
+## Setting up your plugin with the java wrapper
+LicenseGate, by default, uses its own license server that is provided under `api.licensegate.io`. In order to use your own licensing server, you'll need to setup the follwing:
+```java
+LicenseGate licenseGate = new LicenseGate("YOUR_USER_ID");
+licenseGate.setValidationServer("https://license.yourdomain.com");
+```
+Once this is done, license validation should now go through your own licensing server instead of the cloud-hosted one from LicenseGate.

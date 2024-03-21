@@ -131,3 +131,9 @@ boolean isValid = new LicenseGate("YOUR_USER_ID")
 // Having trouble? Enable debug mode
 new LicenseGate("YOUR_USER_ID").debug().verify("LICENSE_KEY");
 ```
+
+#### Using your own LicenseGate server
+
+```java
+new LicenseGate("YOUR_USER_ID").setValidationServer("https://example.com").verify("LICENSE_KEY");
+```
