@@ -102,7 +102,8 @@ if (result == LicenseGate.ValidationType.VALID) {
 
 ```java
 // Your public RSA key (can be found in your settings)
-final String PUBLIC_KEY = "-----BEGIN PUBLIC KEY----- MIIB2d/...";
+// Ensure to fully include it as is on your settings, do not cut away the "begin" and "end" of it
+final String PUBLIC_KEY = "-----BEGIN PUBLIC KEY----- MIIB2d/... -----END PUBLIC KEY-----";
 
 // Initialize the LicenseGate client
 LicenseGate licenseGate = new LicenseGate("YOUR_USER_ID", PUBLIC_KEY);
@@ -135,5 +136,6 @@ new LicenseGate("YOUR_USER_ID").debug().verify("LICENSE_KEY");
 #### Using your own LicenseGate server
 
 ```java
-new LicenseGate("YOUR_USER_ID").setValidationServer("https://example.com").verify("LICENSE_KEY");
+new LicenseGate("YOUR_USER_ID").setValidationServer("https://backend.example.com").verify("LICENSE_KEY");
 ```
+The URL should point to your LicenseGate backend server, not the web interface.
