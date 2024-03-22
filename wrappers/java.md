@@ -60,6 +60,8 @@ dependencies {
 }
 ```
 
+Replacing 1.X.X with the latest version provided on the [Maven Repository](https://maven.respark.dev/#/releases/dev/respark/licensegate/license-gate/).
+
 ### Manual
 
 > Alternatively, you can also download the JAR file from the
