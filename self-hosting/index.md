@@ -163,3 +163,7 @@ RESET_PASSWORD_URL=https://licensegate.example.com/auth/password
 CORS_ORIGIN=https://licensegate.example.com
 GOOGLE_AUTH_CLIENT_ID=none
 ```
+
+## Usage with wrappers
+LicenseGate wrapper libraries, by default, use the public LicenseGate server which is provided under `api.licensegate.io`. In order to use your self-hosted licensing server, you will need to configure your server url when using wrappers.
+Refer to the wrapper documentation for detailed instructions.
