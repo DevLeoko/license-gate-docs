@@ -60,7 +60,8 @@ dependencies {
 }
 ```
 
-Replacing 1.X.X with the latest version provided on the [Maven Repository](https://maven.respark.dev/#/releases/dev/respark/licensegate/license-gate/).
+Replacing 1.X.X with the latest version provided on the
+[Maven Repository](https://maven.respark.dev/#/releases/dev/respark/licensegate/license-gate/).
 
 ### Manual
 
@@ -73,11 +74,10 @@ Replacing 1.X.X with the latest version provided on the [Maven Repository](https
 
 ## Usage
 
-The wrappers provide a simple way to interact with the LicenseGate API. For
-details on the API and its parameters, see the
-[API documentation](/api/verify-license). The maven repository also includes the
-JavaDocs which provides detailed information about the methods and their
-parameters.
+The wrappers provide a simple way to interact with the LicenseGate verification
+API. For details on the API and its parameters, see the
+[API reference](/api-reference). The maven repository also includes the JavaDocs
+which provides detailed information about the methods and their parameters.
 
 ### Usage Examples
 
@@ -140,4 +140,5 @@ new LicenseGate("YOUR_USER_ID").debug().verify("LICENSE_KEY");
 ```java
 new LicenseGate("YOUR_USER_ID").setValidationServer("https://backend.example.com").verify("LICENSE_KEY");
 ```
+
 The URL should point to your LicenseGate backend server, not the web interface.
