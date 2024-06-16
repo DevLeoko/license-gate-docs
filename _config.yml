@@ -2,12 +2,16 @@ title: LicenseGate
 description: The documentation for LicenseGate
 theme: just-the-docs
 
-url: https://licensegate.io
+url: https://docs.licensegate.io
 color_scheme: licensegate
 logo: "https://licensegate.io/images/logo.svg"
 
 aux_links:
   Manage your licenses: https://app.licensegate.io
+
+nav_external_links:
+  - title: API Reference
+    url: /api-reference/
 
 callouts:
   alternative:

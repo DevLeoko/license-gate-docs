@@ -122,7 +122,7 @@ not require the steps above)
     named "license-gate"
 2. Navigate to the backend directory: `cd backend`.
 3. Setup the environment variables `.env` (see below for an example)
-4. Run `npm install`, `npm run prisma-up` and `npm run generate` to setup the
+4. Run `npm install`, `npm run prisma-up` and `npm run prisma-gen` to setup the
    database and generate the Prisma client.
 5. Run `npm run start` to start the backend server.
 
