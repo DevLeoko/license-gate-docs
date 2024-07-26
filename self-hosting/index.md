@@ -43,6 +43,15 @@ For example, the frontend should be served under
 `https://licensegate.example.com` and the backend under
 `https://api.licensegate.example.com`.
 
+## Using Docker
+
+The [GitHub repository](https://github.com/DevLeoko/license-gate) contains the required files to host the LicenseGate dashboard (frontend and backend) including:
+- Automatic SSL certificate through letsencrypt
+- Reverse-proxy through Caddy
+- Database-management through PhpMyAdmin
+
+The SMTP-Server for delivering E-Mails is not included and needs to be provided externally.
+
 ## Frontend
 
 1. Clone the [GitHub repository](https://github.com/DevLeoko/license-gate): 
