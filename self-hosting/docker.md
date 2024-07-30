@@ -13,6 +13,11 @@ Thanks to [CurlyBytes](https://github.com/CurlyBytes) for [contributing](https:/
 
 ## Setup
 
+#### Disclaimer
+**The use of the docker-based setup of licensegate may come with risks, depending on how it is configured. The maintainers of LicenseGate or contributors of the docker-version are not responsible for issues this may cause on either your system or the data stored within it.**
+
+It is recommended to change the configurations to not match the default settings. Included in these are database credentials for example.
+
 ### Installing docker
 Docker can be installed by following the documentation from docker itself [here](https://docs.docker.com/engine/install/).
 
@@ -31,28 +36,44 @@ git clone https://github.com/DevLeoko/license-gate.git
 **Configure settings through .env**:
 Docker-based LicenseGate requires setting up the configurations within the .env on the main folder (based off of the template .env.docker.example).
 
-#### Base .env
 ```
-# Backend
+## Docker-Configuration for using LicenseGate within a docker-environment
+## !!! These are not the main environment variables to use when setting up licensegate without docker !!! 
+## Refer to the docs for more information
+
+## SMTP ##
+# The SMTP server is where mail will be sent from. This is required for registering and password resets.
 SMTP_HOST=mail.example.com
+SMTP_PORT=465
 SMTP_USERNAME=licensegate@example.com
-SMTP_PASSWORD=mySMTPPassw0rd
+SMTP_PASSWORD=mySecr4tPassw0rd
 SMTP_SENDER=LicenseGate <licensegate@example.com>
+
+# Sessioning-secret, can be left default
 JWT_SECRET=secret
-RECAPTCHA_SECRET_KEY=XXYYZZAABBCCDD
+
+## Recaptcha: Anti-spam for registering ##
+## Obtain one here: https://www.google.com/recaptcha/admin/create
+PUBLIC_RECAPTCHA_SITE_KEY=XYZABCDEFGH # "Use this site key in the HTML code your site serves to users."
+RECAPTCHA_SECRET_KEY=XYZABCDEFGH # "Use this secret key for communication between your site and reCAPTCHA."
+
+# Google Auth
+PUBLIC_GOOGLE_AUTH_CLIENT_ID=none
+
 PUBLIC_BACKEND_URL=https://licensegate-api.example.com
 PUBLIC_FRONTEND_URL=https://licensegate.example.com
-MYSQL_ROOT_PASSWORD=rootpassword
-MYSQL_DATABASE=mydb
-MYSQL_USER=user
-MYSQL_PASSWORD=password
-BACKEND_FQDN=licensegate-api.example.com
-FROTNEND_FQDN=licensegate.example.com
 
-# Frontend
-PUBLIC_BACKEND_URL=https://licensegate-api.example.com
-PUBLIC_RECAPTCHA_SITE_KEY=XXYYZZAABBCCDD
-PUBLIC_GOOGLE_AUTH_CLIENT_ID=none
+## Database (only MySQL supported) ##
+MYSQL_HOSTNAME=db # Unless you're providing your own database, do not change this
+MYSQL_PORT=3306
+MYSQL_DATABASE=license-gate
+MYSQL_ROOT_PASSWORD=9Wu7vxKjwQPo2YyFKqTYbv7CZ 
+MYSQL_USER=mysqluser
+MYSQL_PASSWORD=nDdt2uMRJgov2om2dwVYRWkDm
+
+# Required for certificate generation on caddy, these must match your PUBLIC_BACKEND_URL and PUBLIC_FRONTEND_URL
+BACKEND_FQDN=licensegate-api.example.com
+FRONTEND_FQDN=licensegate.example.com
 ```
 
 The Backend_FQDN and FRONTEND_FQDN are required for ssl-certificate generation and **NEED** to match your frontend and backend urls. These are the domains your dashboard and the associated API will be reachable from.
