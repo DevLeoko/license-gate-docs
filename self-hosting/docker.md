@@ -34,9 +34,9 @@ git clone https://github.com/DevLeoko/license-gate.git
 ```
 
 **Configure settings through .env**:
-Docker-based LicenseGate requires setting up the configurations within the .env on the main folder (based off of the template .env.docker.example).
+Docker-based LicenseGate requires setting up the configurations within the `.env` file in the main folder (based off of the template `.env.docker.example`).
 
-```
+```bash
 ## Docker-Configuration for using LicenseGate within a docker-environment
 ## !!! These are not the main environment variables to use when setting up licensegate without docker !!! 
 ## Refer to the docs for more information
@@ -76,7 +76,7 @@ BACKEND_FQDN=licensegate-api.example.com
 FRONTEND_FQDN=licensegate.example.com
 ```
 
-The Backend_FQDN and FRONTEND_FQDN are required for ssl-certificate generation and **NEED** to match your frontend and backend urls. These are the domains your dashboard and the associated API will be reachable from.
+The `BACKEND_FQDN` and `FRONTEND_FQDN` are required for ssl-certificate generation and **NEED** to match your frontend and backend urls. These are the domains your dashboard and the associated API will be reachable from.
 
 ## Starting the docker-service
 
@@ -90,7 +90,7 @@ docker compose up -d
 
 Please wait up to a minute for the dashboard to fully start up, including its database and API.
 
-You can now visit the dashboard under your ``PUBLIC_FRONTEND_URL``.
+You can now visit the dashboard under your `PUBLIC_FRONTEND_URL`.
 
 ## Advanced Users
 
@@ -125,7 +125,7 @@ Changing the ports can be done the following:
 
 Changing elements within the .env variables require a full rebuild of the images. This can be done by shutting down the containers using `docker compose down --rmi local` to remove relevant images. **Volumes are not deleted unless `-v` is used too**.
 
-```
+```bash
 # Backend
 ...
 PUBLIC_BACKEND_URL=https://licensegate-api.example.com:4443 # change ports here by adding :port-number
